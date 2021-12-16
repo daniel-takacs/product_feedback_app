@@ -1,0 +1,35 @@
+.sidebar_container {
+    width: 255px;
+    height: 529px;
+    margin: 0 15px;
+    
+}
+.sidebar_header {
+    color: white;
+    height: 137px;
+    border-radius: 15px;
+    background: url('../../assets/suggestions/desktop/background-header.png');
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.header_content {
+    position: absolute;
+    bottom: 0;
+    padding: 15px;
+}
+.sidebar_main {
+    margin: 15px 0 15px 0;
+    height: 137px;
+    background-color: white;
+    border-radius: 15px;
+}
+.sidebar_bottom {
+    height: 137px;
+    background-color: white;
+    border-radius: 15px;
+}
+.sidebar_bottom_header {
+    display: flex;
+    justify-content: space-between;
+}

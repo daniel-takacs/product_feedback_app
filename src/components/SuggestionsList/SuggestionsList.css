@@ -1,0 +1,9 @@
+.suggestion_box_container {
+    background-color: white;
+    display: flex;
+    
+    height: 151px;
+    align-items: center;
+    margin: 15px 0 15px 0;
+    border-radius: 15px;
+}
