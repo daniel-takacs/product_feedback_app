@@ -1,5 +1,6 @@
 import React from 'react'
 import './Header.css'
+import { Button1 } from '../../style/Buttons'
 
 function Header() {
     return (
@@ -12,9 +13,9 @@ function Header() {
             </div>
                 <div className='right'>
                     <div>
-                        <button className='add_button'>
+                        <Button1 className='add_button'>
                             + Add Feedback
-                        </button>
+                        </Button1>
                     </div>
                 </div>
         </div>
