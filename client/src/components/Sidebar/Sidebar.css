@@ -19,7 +19,15 @@
     padding: 15px;
 }
 .sidebar_main {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    align-content: flex-start;
+    gap: 15px;
+    flex-wrap: wrap;
     margin: 15px 0 15px 0;
+    padding: 10px;
     height: 137px;
     background-color: white;
     border-radius: 15px;
