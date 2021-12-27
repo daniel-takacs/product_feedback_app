@@ -1,6 +1,7 @@
 import React from 'react'
 import './Header.css'
 import { Button1 } from '../../style/Buttons'
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
 function Header() {
     return (
@@ -10,6 +11,7 @@ function Header() {
                 6 Suggestions
                 Sort by:
                 Most upvotes
+                <KeyboardArrowDownIcon />
             </div>
                 <div className='right'>
                     <div>
