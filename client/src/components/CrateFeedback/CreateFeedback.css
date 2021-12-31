@@ -1,0 +1,36 @@
+.create-feedback-outer-container {
+    width: 540px;
+    height: 740px;
+    outline: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.create-feedback-inner-container {
+    padding: 15px;
+}
+.new-feedback-icon {
+    width: 56px;
+    height: 56px;
+}
+.create-feedback-buttons {
+    display: flex;
+
+}
+textarea {
+    width: 456px;
+    height: 96px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
+  }
+  .arrow-left {
+      color: #4661E6;
+  }
