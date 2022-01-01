@@ -6,9 +6,20 @@ import {CancelButton} from '../../style/Buttons.jsx'
 import {Button1} from '../../style/Buttons.jsx'
 import ArrowLeft from '../../assets/shared/icon-arrow-left.svg'
 import {GoBackButton} from '../../style/Buttons.jsx'
+import { motion } from 'framer-motion/dist/framer-motion'
+
+import { animation, transition } from '../../animations/index'
+
 
 function CreateFeedback() {
     return (
+        <motion.div
+        initial="out"
+        animate="in"
+        exit="out"
+        variants={animation}
+        transition={transition}
+        >
         <div className="create-feedback-outer-container"> 
             <div className="go-back-button">
                 <img className="arrow-left"src={ArrowLeft} alt="arow left"/>
@@ -48,6 +59,7 @@ function CreateFeedback() {
                 </div>
             </div>
         </div>
+        </motion.div>
     )
 }
 

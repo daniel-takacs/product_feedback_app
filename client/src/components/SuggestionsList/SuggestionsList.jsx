@@ -1,7 +1,7 @@
 import React from 'react'
 import './SuggestionsList.css'
 import Data from '../../data.json'
-import { H2 } from '../../style/Global'
+import { H2 } from '../../style/GlobalStyle'
 
 function SuggestionsList() {
     return (
