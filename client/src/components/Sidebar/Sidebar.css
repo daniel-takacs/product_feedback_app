@@ -36,8 +36,24 @@
     height: 137px;
     background-color: white;
     border-radius: 15px;
+    padding: 15px 25px;
 }
 .sidebar_bottom_header {
     display: flex;
     justify-content: space-between;
 }
+.sidebar_bottom_list {
+    fmargin-left: 20px;
+}
+ul {
+    list-style: none;
+  }
+ul li::before {
+    content: "•";
+    font-size: 25px;
+    color: red;
+    font-weight: bold;
+    display: inline-block; 
+    width: 1rem;
+    margin-left: -1rem;
+  }

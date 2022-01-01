@@ -1,16 +1,20 @@
 .create-feedback-outer-container {
     width: 540px;
     height: 740px;
-    outline: 1px solid black;
+ 
     display: flex;
     flex-direction: column;
+    
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 .create-feedback-inner-container {
-    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    padding: 35px;
+    background-color: white;
 }
 .new-feedback-icon {
     width: 56px;
@@ -18,19 +22,39 @@
 }
 .create-feedback-buttons {
     display: flex;
-
+    align-self: end;
+}
+.go-back-button {
+    margin-bottom: 25px;
 }
 textarea {
     width: 456px;
     height: 96px;
     padding: 12px 20px;
     box-sizing: border-box;
-    border: 2px solid #ccc;
+    border: none;
     border-radius: 4px;
-    background-color: #f8f8f8;
+    background-color: #F7F8FD;
     font-size: 16px;
     resize: none;
   }
   .arrow-left {
       color: #4661E6;
+  }
+  .create-feedback-inner-container > h3 {
+    margin: 30px 0;
+  }
+  input[type=text] {
+    width: 456px;
+    height: 65px;
+    padding: 12px 20px;
+    background-color: #F7F8FD;
+    border: none;
+  }
+  select {
+    width: 456px;
+    background-color: #F7F8FD;
+    border: none;
+    padding: 12px 20px;
+    margin: 25px 0;
   }

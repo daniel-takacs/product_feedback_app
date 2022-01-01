@@ -16,10 +16,12 @@ export const CancelButton = styled.button `
     color: white;
     border-radius: 10px;
     font-weight: bold;
+    margin-right: 20px;
 `
 export const GoBackButton = styled.button `
     background-color: transparent;
     border: none;
     font-weight: bold;
     color: #647196;
+    padding-left: 20px;
 `

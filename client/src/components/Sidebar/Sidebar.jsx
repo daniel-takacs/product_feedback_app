@@ -26,9 +26,9 @@ function Sidebar() {
                 </div>
                 <div className="sidebar_bottom_list">
                     <ul>
-                        <li>Planned Number here</li>
-                        <li>In-Progress Number here</li>
-                        <li>Live Number here</li>
+                        <li>Planned 2</li>
+                        <li>In-Progress 2</li>
+                        <li>Live 2</li>
                     </ul>
                 </div>
             </div>
