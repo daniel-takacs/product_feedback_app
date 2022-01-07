@@ -1,6 +1,6 @@
 import './global.css';
-import Home from './components/Home/Home';
-import CreateFeedback from './components/CrateFeedback/CreateFeedback';
+import Home from './Pages/Home/Home';
+import CreateFeedback from './Pages/AddFeedback/CreateFeedback';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 

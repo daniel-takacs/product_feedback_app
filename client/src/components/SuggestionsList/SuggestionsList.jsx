@@ -2,11 +2,37 @@ import React from 'react'
 import './SuggestionsList.css'
 import Data from '../../data.json'
 import { H2 } from '../../style/GlobalStyle'
+import CommentImg from '../../assets/shared/icon-comments.svg'
 
-function SuggestionsList() {
+function SuggestionsList({ sortedByUser }) {
+
+    let data = Data.productRequests
+
+    let sortedList
+    
+    if(sortedByUser === "most-upvotes") {
+        sortedList = data.slice().sort(function(a, b) {
+            return b.upvotes - a.upvotes
+        })
+    }else if(sortedByUser === "least-upvotes") {
+        sortedList = data.slice().sort(function(a, b) {
+            return a.upvotes - b.upvotes
+        })
+    }else if(sortedByUser === "most-comments") {
+        sortedList = data.slice().sort(function(a, b) {
+            return b.comments - a.comments
+        })
+    }else if(sortedByUser === "least-comments") {
+        sortedList = data.slice().sort(function(a, b) {
+            return a.comments - b.comments
+        })
+    }
+
+    
+
     return (
         <div className='suggestionList'>
-                {Data.productRequests.map((post, index) => (
+                {sortedList.map((post, index) => (
                     <div key={index} className='suggestion_box_container'>
                         <div className='feedback_left'>
                             <p>{post.upvotes}</p>
@@ -17,7 +43,8 @@ function SuggestionsList() {
                             <p>{post.category}</p>
                         </div>
                         <div className="feedback_right">
-                            <p>2</p>
+                            <img src={CommentImg} alt="comment image" />
+                            <p>{}</p>
                         </div>
                     </div>
                     

@@ -11,5 +11,9 @@
     width: 500px;
 }
 .feedback_right {
-    
+    display: flex;
+    align-items: center;
+}
+.feedback_right > img {
+    margin-right: 10px;
 }
