@@ -1,17 +1,15 @@
 import React from 'react'
 import './Header.css'
 import { Button1 } from '../../style/Buttons'
-
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import SuggestionHeaderIcon from '../../assets/suggestions/icon-suggestions.svg'
 
-function Header({ sortedByUser, setSortedByUser }) {
+function Header({ setSortedByUser }) {
 
     const sortingChange = (e)=> {
         setSortedByUser(e.target.value)
     }
 
-    console.log(sortedByUser)
     return (
         <div className='header'>
             <div className='header-left'>

@@ -1,0 +1,19 @@
+.empty-page-container {
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 25px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.empty-page-container > img {
+    margin-bottom: 25px;
+}
+.empty-text {
+    margin: 25px 0;
+}
+.empty-text > p {
+    text-align: center;
+}

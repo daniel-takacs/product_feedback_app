@@ -5,6 +5,9 @@
   margin: 0;
   box-sizing: border-box;
 }
+html {
+  overflow-y: scroll;
+}
 body {
   background-color: #F2F4FF;
   font-family: jost;

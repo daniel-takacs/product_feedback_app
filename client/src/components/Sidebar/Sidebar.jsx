@@ -2,7 +2,14 @@ import React from 'react'
 import './Sidebar.css'
 import { SidebarButton } from './SidebarElements'
 
-function Sidebar() {
+function Sidebar({ category, setCategory}) {
+
+    const categoryChange = (e)=> {
+        setCategory(e.target.dataset.id)
+        
+    }
+    console.log(category)
+
     return (
         <div className='sidebar_container'>
             <div className='sidebar_header'>
@@ -12,12 +19,12 @@ function Sidebar() {
                 </div>
             </div>
             <div className='sidebar_main'>
-                <div><SidebarButton>All</SidebarButton></div>
-                <div><SidebarButton>UI</SidebarButton></div>
-                <div><SidebarButton>UX</SidebarButton></div>
-                <div><SidebarButton>Enchancement</SidebarButton></div>
-                <div><SidebarButton>Bug</SidebarButton></div>
-                <div><SidebarButton>Feature</SidebarButton></div>
+                <SidebarButton activeClassname="active"data-id="all" onClick={categoryChange}>All</SidebarButton>
+                <SidebarButton activeClassname="active"data-id="ui" onClick={categoryChange}>UI</SidebarButton>
+                <SidebarButton activeClassname="active"data-id="ux" onClick={categoryChange}>UX</SidebarButton>
+                <SidebarButton activeClassname="active"data-id="enhancement" onClick={categoryChange}>Enhancement</SidebarButton>
+                <SidebarButton activeClassname="active"data-id="bug" onClick={categoryChange}>Bug</SidebarButton>
+                <SidebarButton activeClassname="active"data-id="feature" onClick={categoryChange}>Feature</SidebarButton>
             </div>
             <div className='sidebar_bottom'>
                 <div className='sidebar_bottom_header'>
