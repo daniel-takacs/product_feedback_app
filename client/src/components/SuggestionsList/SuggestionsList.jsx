@@ -1,15 +1,18 @@
 import React from 'react'
 import './SuggestionsList.css'
 import Data from '../../data.json'
-import { H2 } from '../../style/GlobalStyle'
-import CommentImg from '../../assets/shared/icon-comments.svg'
-import EmptyPage from '../../components/EmptyPage/EmptyPage'
 
-function SuggestionsList({ sortedByUser, category }) {
+import EmptyPage from '../../components/EmptyPage/EmptyPage'
+import Suggestion from '../Suggestion/Suggestion'
+
+function SuggestionsList({ sortedByUser, category, mappedPost, setMappedPost }) {
 
     let data = Data.productRequests
+    
     let categorized
     let sortedList
+
+  
 
     if (category === 'feature'){
         categorized = data.filter(item => item.category === 'feature')
@@ -50,23 +53,11 @@ function SuggestionsList({ sortedByUser, category }) {
 
         return (
             <div className='suggestionList'>
-                    {sortedList.map((post, index) => (
-                        <div key={index} className='suggestion_box_container'>
-                            <div className='feedback_left'>
-                                <p>{post.upvotes}</p>
-                            </div>
-                            <div className='feedback_center'>
-                                <H2>{post.title}</H2>
-                                <p>{post.description}</p>
-                                <p>{post.category}</p>
-                            </div>
-                            <div className="feedback_right">
-                                <img src={CommentImg} alt="comment image" />
-                                <p>{}</p>
-                            </div>
-                        </div>
-                        
-                    ))}
+                {sortedList.map(post => (
+                    <Suggestion 
+                        mappedPost={mappedPost} setMappedPost={setMappedPost}
+                        sortedList={sortedList} post={post} key={post.id}/>
+                ))}
             </div>
         )
     }

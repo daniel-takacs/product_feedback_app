@@ -9,7 +9,8 @@ import { animation, transition } from '../../animations/index'
 function Home() {
 
     const [sortedByUser, setSortedByUser] = useState('most-upvotes')
-    const [category, setCategory] = useState('feature')
+    const [category, setCategory] = useState('all')
+    const [mappedPost, setMappedPost] = useState([])
 
     return (
         <motion.div initial="out" animate="in" exit="out" variants={animation} transition={transition}>
@@ -22,7 +23,9 @@ function Home() {
                         <Header sortedByUser={sortedByUser} setSortedByUser={setSortedByUser}/>
                     </div>
                     <div className='suggestionsList'>
-                        <SuggestionsList sortedByUser={sortedByUser} category={category}setCategory={setCategory}/>
+                        <SuggestionsList 
+                            sortedByUser={sortedByUser} category={category}setCategory={setCategory}
+                            mappedPost={mappedPost} setMappedPost={setMappedPost}/>
                     </div>
                 </div>
             </div>
