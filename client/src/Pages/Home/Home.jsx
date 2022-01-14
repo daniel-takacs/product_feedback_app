@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React from 'react'
 import Header from '../../components/Header/Header'
 import Sidebar from '../../components/Sidebar/Sidebar'
 import SuggestionsList from '../../components/SuggestionsList/SuggestionsList'
@@ -6,30 +6,30 @@ import './Home.css'
 import { motion } from 'framer-motion/dist/framer-motion'
 import { animation, transition } from '../../animations/index'
 
+
 function Home() {
 
-    const [sortedByUser, setSortedByUser] = useState('most-upvotes')
-    const [category, setCategory] = useState('all')
-    const [mappedPost, setMappedPost] = useState([])
+    const [sorted, setSorted] = React.useState('most-upvotes')
+    const [category, setCategory] = React.useState('all')
 
     return (
-        <motion.div initial="out" animate="in" exit="out" variants={animation} transition={transition}>
-            <div className='container'>
-                <div className='sidebar'>
-                    <Sidebar category={category} setCategory={setCategory}/>
-                </div>
-                <div>
-                    <div className='header'>
-                        <Header sortedByUser={sortedByUser} setSortedByUser={setSortedByUser}/>
+   
+                <motion.div initial="out" animate="in" exit="out" variants={animation} transition={transition}>
+                    <div className='container'>
+                        <div className='sidebar'>
+                            <Sidebar category={category} setCategory={setCategory} sorted={sorted} setSorted={setSorted}/>
+                        </div>
+                        <div>
+                        <div className='header'>
+                            <Header category={category} setCategory={setCategory} sorted={sorted} setSorted={setSorted}/>
+                        </div>
+                        <div className='suggestionsList'>
+                            <SuggestionsList category={category} setCategory={setCategory} sorted={sorted} setSorted={setSorted}/>
+                        </div>
+                        </div>
                     </div>
-                    <div className='suggestionsList'>
-                        <SuggestionsList 
-                            sortedByUser={sortedByUser} category={category}setCategory={setCategory}
-                            mappedPost={mappedPost} setMappedPost={setMappedPost}/>
-                    </div>
-                </div>
-            </div>
-        </motion.div>
+                </motion.div>
+       
     )
 }
 

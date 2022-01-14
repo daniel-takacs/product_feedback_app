@@ -1,14 +1,15 @@
-import React from 'react'
+import React, {useContext} from 'react'
+import { CategoryContext } from '../../context/CategoryContext'
 import './Sidebar.css'
 import { SidebarButton } from './SidebarElements'
 
-function Sidebar({ category, setCategory}) {
+function Sidebar({ setCategory }) {
 
     const categoryChange = (e)=> {
         setCategory(e.target.dataset.id)
         
     }
-    console.log(category)
+   // console.log(category)
 
     return (
         <div className='sidebar_container'>
@@ -29,7 +30,7 @@ function Sidebar({ category, setCategory}) {
             <div className='sidebar_bottom'>
                 <div className='sidebar_bottom_header'>
                     <h4>Roadmap</h4>
-                    <a href=''>View</a>    
+                    <a href='*'>View</a>    
                 </div>
                 <div className="sidebar_bottom_list">
                     <ul>

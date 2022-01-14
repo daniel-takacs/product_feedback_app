@@ -1,18 +1,15 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './SuggestionsList.css'
 import Data from '../../data.json'
 
 import EmptyPage from '../../components/EmptyPage/EmptyPage'
 import Suggestion from '../Suggestion/Suggestion'
 
-function SuggestionsList({ sortedByUser, category, mappedPost, setMappedPost }) {
+function SuggestionsList({ category, sorted}) {
 
     let data = Data.productRequests
-    
     let categorized
     let sortedList
-
-  
 
     if (category === 'feature'){
         categorized = data.filter(item => item.category === 'feature')
@@ -29,19 +26,19 @@ function SuggestionsList({ sortedByUser, category, mappedPost, setMappedPost }) 
     }
 
 
-    if(sortedByUser === "most-upvotes") {
+    if(sorted === "most-upvotes") {
         sortedList = categorized.slice().sort(function(a, b) {
             return b.upvotes - a.upvotes
         })
-    }else if(sortedByUser === "least-upvotes") {
+    }else if(sorted === "least-upvotes") {
         sortedList = categorized.slice().sort(function(a, b) {
             return a.upvotes - b.upvotes
         })
-    }else if(sortedByUser === "most-comments") {
+    }else if(sorted === "most-comments") {
         sortedList = categorized.slice().sort(function(a, b) {
             return b.comments - a.comments
         })
-    }else if(sortedByUser === "least-comments") {
+    }else if(sorted === "least-comments") {
         sortedList = categorized.slice().sort(function(a, b) {
             return a.comments - b.comments
         })
@@ -55,7 +52,6 @@ function SuggestionsList({ sortedByUser, category, mappedPost, setMappedPost }) 
             <div className='suggestionList'>
                 {sortedList.map(post => (
                     <Suggestion 
-                        mappedPost={mappedPost} setMappedPost={setMappedPost}
                         sortedList={sortedList} post={post} key={post.id}/>
                 ))}
             </div>

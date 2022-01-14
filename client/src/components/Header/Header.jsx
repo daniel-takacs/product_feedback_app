@@ -1,19 +1,21 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './Header.css'
 import { Button1 } from '../../style/Buttons'
 import { Link } from 'react-router-dom'
 import SuggestionHeaderIcon from '../../assets/suggestions/icon-suggestions.svg'
 
-function Header({ setSortedByUser }) {
+
+function Header({ setSorted }) {
+
 
     const sortingChange = (e)=> {
-        setSortedByUser(e.target.value)
+        setSorted(e.target.value)
     }
 
     return (
         <div className='header'>
             <div className='header-left'>
-                <img src={SuggestionHeaderIcon} alt="suggestion header icon" />
+                <img src={SuggestionHeaderIcon} alt="suggestionheadericon" />
                 <h4>6 Suggestions</h4>
                 <label>Sort by:</label>
                 <select id="sort" defaultValue="most-upvotes" onChange={e => sortingChange(e)}>

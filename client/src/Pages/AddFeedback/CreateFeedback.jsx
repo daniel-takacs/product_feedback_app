@@ -6,7 +6,7 @@ import {CancelButton} from '../../style/Buttons.jsx'
 import {Button1} from '../../style/Buttons.jsx'
 import ArrowLeft from '../../assets/shared/icon-arrow-left.svg'
 import {GoBackButton} from '../../style/Buttons.jsx'
-import {AnimatePresence, motion} from 'framer-motion/dist/framer-motion'
+import {motion} from 'framer-motion/dist/framer-motion'
 
 
 import { animation, transition } from '../../animations/index'
